@@ -1,23 +1,28 @@
-// requirements
-var express = require("express");
-var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
+const express = require('express');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+// Set the server port to a dynamic value for deployment and to 3000 for local development
+const port = process.env.PORT || 3000;
 
-var app = express();
-var PORT = process.env.PORT || 3006;
+const app = express();
 
-app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
-});
+// Set up middleware
+app.use(express.static('public'));
 
-app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// Setup Handlebars
+const exphbs = require('express-handlebars');
 
-// routes to be added!!!!!
-var routes = require("./controllers/burgers_controller.js");
-app.use(routes);
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+// Import routes from the Controllers folder
+const routes = require('./controllers/burgers_controller.js');
+
+app.use('/', routes);
+
+app.listen(port);
