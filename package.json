@@ -1,27 +1,30 @@
 {
-  "name": "week-14-nodeexpresshandlebars",
+  "name": "eatdaburger",
+  "description": "MSU - Homework 13: Eat Da Burger App (Node Express Handlebars)",
   "version": "1.0.0",
-  "description": "week-14-nodeExpressHandleBars",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuanqtran/week-14-nodeExpressHandleBars.git"
+    "url": "git+https://github.com/stricklin927/EatDaBurger.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alexandra Stricklin",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tuanqtran/week-14-nodeExpressHandleBars/issues"
+    "url": "https://github.com/stricklin927/EatDaBurger/issues"
   },
-  "homepage": "https://github.com/tuanqtran/week-14-nodeExpressHandleBars#readme",
+  "homepage": "https://github.com/stricklin927/EatDaBurger#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.6",
-    "mysql": "^2.11.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
