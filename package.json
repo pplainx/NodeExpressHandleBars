@@ -1,27 +1,27 @@
 {
-  "name": "13-nodeexpresshandlebars-burger",
+  "name": "week-14-nodeexpresshandlebars",
   "version": "1.0.0",
-  "description": "### Overview In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.",
+  "description": "week-14-nodeExpressHandleBars",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zidandesirae/13-NodeExpressHandlebars-Burger.git"
+    "url": "git+https://github.com/tuanqtran/week-14-nodeExpressHandleBars.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zidandesirae/13-NodeExpressHandlebars-Burger/issues"
+    "url": "https://github.com/tuanqtran/week-14-nodeExpressHandleBars/issues"
   },
-  "homepage": "https://github.com/zidandesirae/13-NodeExpressHandlebars-Burger#readme",
+  "homepage": "https://github.com/tuanqtran/week-14-nodeExpressHandleBars#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mysql": "^2.18.1"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1"
   }
 }
